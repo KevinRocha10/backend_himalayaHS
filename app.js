@@ -1,27 +1,35 @@
-import express from "express";
-import cors from "cors";
-//importamos la conexión a la DB
-import db from "./database/db.js";
-//importamos nuestro enrutador
-import blogRoutes from "./routes/routes.js";
+const express = require("express");
+const dotenv = require("dotenv");
+const cookieParser = require("cookie-parser");
 
 const app = express();
 
-app.use(cors());
+//seteamos el motor de plantillas
+app.set("view engine", "ejs");
+
+//seteamos la carpeta public para archivos estáticos
+app.use(express.static("public"));
+
+//para procesar datos enviados desde forms
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/blogs", blogRoutes);
 
-try {
-  await db.authenticate();
-  console.log("Conexión exitosa a la DB");
-} catch (error) {
-  console.log(`El error de conexión es: ${error}`);
-}
+//seteamos las variables de entorno
+dotenv.config({ path: "./env/.env" });
 
-// app.get("/", (req, res) => {
-//   res.send("HOLA MUNDO");
-// });
+//para poder trabajar con las cookies
+app.use(cookieParser());
 
-app.listen(8000, () => {
-  console.log("Server UP running in http://localhost:8000/");
+//llamar al router
+app.use("/", require("./routes/router"));
+
+//Para eliminar la cache
+app.use(function (req, res, next) {
+  if (!req.user)
+    res.header("Cache-Control", "private, no-cache, no-store, must-revalidate");
+  next();
+});
+
+app.listen(3000, () => {
+  console.log("SERVER UP runnung in http://localhost:3000");
 });

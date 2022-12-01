@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DashBoard</title>
+    <style>
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- =============== BARRA DE NAVEGACIÓN ================ -->
+    <div class="container">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="medal"></ion-icon></span>
+              <span class="title">SYSTEMS HIMALAYA HS</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="home"></ion-icon></span>
+              <span class="title">Menú</span>
+            </a>
+          </li>
+          <li>
+            <a href="/html/pago.html">
+              <span class="icon"><ion-icon name="card"></ion-icon></span>
+              <span class="title">Registro de pagos</span>
+            </a>
+          </li>
+          <li>
+            <a href="/register">
+              <span class="icon"><ion-icon name="settings"></ion-icon></span>
+              <span class="title">Configuración</span>
+            </a>
+          </li>
+          <li>
+            <a href="logout">
+              <span class="icon"><ion-icon name="log-out"></ion-icon></span>
+              <span class="title">Salir</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ========================= MENU ==================== -->
+      <div class="main">
+        <div class="topbar">
+          <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+          </div>
+
+          <div class="search">
+            <label>
+              <input type="text" placeholder="Search here" />
+              <ion-icon name="search-outline"></ion-icon>
+            </label>
+          </div>
+
+          <div class="user">
+            <img src="/img/adm.png" alt="" />
+          </div>
+        </div>
+
+        <!-- ======================= Tarjetas ================== -->
+        <div class="cardBox">
+          <div class="card">
+            <div>
+              <div class="numbers">40</div>
+              <div class="cardName">Almuerzos Vendidos</div>
+            </div>
+
+            <div class="iconBx">
+              <ion-icon name="cart"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">29</div>
+              <div class="cardName">Almuerzos Consumidos Hoy</div>
+            </div>
+
+            <div class="iconBx">
+              <ion-icon name="cash"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">28</div>
+              <div class="cardName">Loncheras Vendidas</div>
+            </div>
+
+            <div class="iconBx">
+              <ion-icon name="cart"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">26</div>
+              <div class="cardName">Loncheras Consumidas Hoy</div>
+            </div>
+
+            <div class="iconBx">
+              <ion-icon name="cash"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">1</div>
+              <div class="cardName">Estudiantes Consumen No Pagos</div>
+            </div>
+
+            <div class="iconBx">
+              <ion-icon name="eye"></ion-icon>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================ LISTAS ================= -->
+        <div class="details">
+          <div class="recentOrders">
+            <div class="cardHeader">
+              <h2>Estudiantes Que Acceden Al Restaurante</h2>
+              <a href="#" class="btn">Ver Todo</a>
+            </div>
+
+            <table>
+              <caption>
+                TITLE
+              </caption>
+              <thead>
+                <tr>
+                  <td>Curso</td>
+                  <td>Grupo</td>
+                  <td>Nombre</td>
+                  <td>Acceso</td>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Parvulos</td>
+                  <td></td>
+                  <td>Pepito Perez</td>
+                  <td>
+                    <span class="status delivered">Lonchera</span>
+                    <span class="status pending">Almuerzo</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Parvulos</td>
+                  <td></td>
+                  <td>Santiago APerez</td>
+                  <td>
+                    <span class="status delivered">Lonchera</span>
+                    <span class="status pending">Almuerzo</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Primero</td>
+                  <td>A</td>
+                  <td>Camilo APerez</td>
+                  <td>
+                    <span class="status delivered">Lonchera</span>
+                    <span class="status pending">Almuerzo</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Segundo</td>
+                  <td>A</td>
+                  <td>Esteban APerez</td>
+                  <td>
+                    <span class="status pending">Almuerzo</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Tercero</td>
+                  <td>A</td>
+                  <td>Mario APerez</td>
+                  <td>
+                    <span class="status pending">Almuerzo</span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Primero</td>
+                  <td>A</td>
+                  <td>Camilo APerez</td>
+                  <td>
+                    <span class="status delivered">Lonchera</span>
+                    <span class="status pending">Almuerzo</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- ================= Nuevas Noticias ================ -->
+          <div class="recentCustomers">
+            <div class="cardHeader">
+              <h2>Nuevos Eventos</h2>
+            </div>
+
+            <strong
+              >SE PRETENDE MOSTRAR LAS NOTIFICACIONES EN ESTE ESPACIO QUE SE
+              GENEREN CUANDO UN ESTUDAINTE INGRESA PERO NO PAGA</strong
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <!-- =========== Scripts =========  -->
+  <script src="/js/dashboard.js"></script>
+
+  <!-- ====== ionicons ======= -->
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+  ></script>
+  <!-- 
+  <footer>
+    <p>Author: Kevin David Rocha Bautista</p>
+  </footer> -->
+</html>
