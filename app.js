@@ -21,7 +21,7 @@ dotenv.config({ path: "./env/.env" });
 app.use(cookieParser());
 
 //llamar al router
-app.use("/", require("./routes/router"));
+app.use("/", require("/routes/router"));
 
 //Para eliminar la cache
 app.use(function (req, res, next) {
