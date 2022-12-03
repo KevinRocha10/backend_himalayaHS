@@ -3,7 +3,7 @@
 ## Configuración del entorno
 
 1. Crear la base de datos
-2. Copiar .env.example a .env y rellenar con las credenciales de la base de datos local
+2. Cambiar el archivo .env.example y renombrarlo por .env y rellenar con las credenciales de la base de datos local
 
 Ahora, instale las dependencias
 
