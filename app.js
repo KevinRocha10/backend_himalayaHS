@@ -2,7 +2,6 @@ const express = require("express");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const { Config } = require("./config/environment");
-require("./database/connection");
 const app = express();
 
 //seteamos el motor de plantillas
