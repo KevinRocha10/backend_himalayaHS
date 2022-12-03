@@ -1,7 +1,8 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
-
+const { Config } = require("./config/environment");
+require("./database/connection");
 const app = express();
 
 //seteamos el motor de plantillas
@@ -21,7 +22,7 @@ dotenv.config({ path: "./env/.env" });
 app.use(cookieParser());
 
 //llamar al router
-app.use("/", require("./routes/router"));
+// app.use("/", require("./routes/router"));
 
 //Para eliminar la cache
 app.use(function (req, res, next) {
@@ -30,6 +31,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.listen(3000, () => {
-  console.log("SERVER UP runnung in http://localhost:3000");
+app.listen(Config.port, () => {
+  console.log(`SERVER UP runnung in http://localhost:${Config.port}`);
 });
