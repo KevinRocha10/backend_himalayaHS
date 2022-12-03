@@ -9,4 +9,5 @@ module.exports.Config = {
     jwtTimeExpire: process.env.JWT_TIEMPO_EXPIRA,
     jwtCookieExpire: process.env.JWT_COOKIE_EXPIRE,
     port: process.env.PORT,
+    salts: process.env.SALTS,
 }

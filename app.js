@@ -2,6 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const { Config } = require("./config/environment");
+const usersRoute = require("./routes/users");
 const app = express();
 
 //seteamos el motor de plantillas
@@ -21,7 +22,7 @@ dotenv.config({ path: "./env/.env" });
 app.use(cookieParser());
 
 //llamar al router
-// app.use("/", require("./routes/router"));
+app.use("/users", usersRoute);
 
 //Para eliminar la cache
 app.use(function (req, res, next) {
